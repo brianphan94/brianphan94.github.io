@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700;500&family=RocknRoll+One&display=swap');
+:root {
+    --primary-color: rgb(62, 170, 241);
+
+}
+body {
+    background: #ccf0e2;
+    margin: 0;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+.navbar {
+    background: white;
+    padding: 1em 1em 0em 1em;
+}
+
+.logo {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 200%;
+    margin: .25em;
+}
+
+span{
+    color: var(--primary-color);
+}
+
+nav{
+    display: none;
+}
+
+.container{
+    display: flex;
+    place-content: space-between;
+}
+
+.mobile-menu {
+    cursor: pointer;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 3em 2em 2em 2em;
+}
+
+.hero {
+    text-align: center;
+}
+
+.left-col {
+
+}
+
+.subhead {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: grey;
+    letter-spacing: .3em;
+}
+
+h1 {
+    font-size: 2.5em;
+    line-height: 1.3em;
+    margin-top: .2em;
+}
+
+.primary-cta {
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: .3em 1em;
+    font-size: .7em;
+    border-radius: 3em;
+    margin-top: .5em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.watch-video-cta {
+    display: block;
+    margin-top: .5em;
+    color: purple;
+    font-size: .5em;
+}
+
+.hero-img {
+    width: 50%;
+    margin-top: 1em;
+}
+
+section.features-section {
+    background: #3d464e;
+    color: white;
+}
+
+ul.features-list{
+    margin: 0;
+    padding-left: .2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+
+}
+
+li {
+    font-size: 1.3em;
+    margin-bottom: 3em;
+    margin-left: 1em;
+}
+
+.features-section img{
+    display: none;
+}
+
+.testimonial-section {
+    background: var(--primary-color);
+}
+
+.person-img {
+    width: 5em;
+    height: 5em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+label{
+    display: block;
+    font-size: .8em;
+    margin-bottom: .35em;
+}
+input, textarea {
+    width: 100%;
+    padding: .75em;
+    margin-bottom: 1em;
+    border-radius: .3em;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.send-message-cta {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    border: none;
+    margin-bottom: 5em;
+    border-radius: .5em;
+    display: inline-block;
+    padding: .75em 1em;
+    width: unset;
+    cursor: pointer;
+}
+
+nav.menu-btn {
+    display: block;
+    
+}
+
+nav {
+    position: fixed;
+    z-index: 999;
+    width: 40%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #383a37;
+    height: 100vh;
+    padding: 1em;
+}
+
+ul.primary-nav{
+    margin-top: 5em;
+}
+
+.nav-text{
+    color: white;
+    
+}
+
+.home {
+    color: white;
+}
+
+.mobile-menu-exit {
+    float: right;
+    padding: 1em;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 800px) {
+    .mobile-menu, .mobile-menu-exit {
+        display: none;
+    }
+
+    .navbar .container{
+        display: grid;
+        grid-template-columns: 180px auto;
+    }
+
+    .navbar nav {
+        display: flex;
+        justify-content: space-between;
+        background: none;
+        position: unset;
+        height: auto;
+        width: 100%;
+        padding: 1em;
+        margin-bottom:-3em;
+        justify-content: unset;
+        
+        ul {
+        display: flex;
+        }
+
+        a{
+        color: black;
+        font-size: 1em;
+        padding: .1em 1em;
+        }
+
+        ul.primary-nav {
+            margin: 0;
+        }
+
+        li.current a{
+            font-weight:0;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1080px) {
+    .container {
+        width: 1080px;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 10em 4em;
+    }
+
+    .hero .container {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+
+        left-col {
+            margin: 3em 3em 0 5em;
+        }
+
+        h1 {
+            font-size: 3em;
+            width: 90%
+        }
+    }
+
+    .hero-img {
+        width: 30%;
+        margin-right: 5em;
+    }
+
+    .hero-cta {
+        display: flex;
+    }
+
+    .primary-cta {
+        margin-right: 1em;
+    }
+
+    ul.features-list {
+        display: block;
+        margin-left: 5em;
+
+        li {
+            font-size: 1.5em;
+        }
+    }
+
+    .features-section {
+        position: relative;
+    }
+
+    .features-section img{
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 350px;
+        bottom: -2em;
+    }
+
+    .testimonial-section {
+        display: flex;
+    }
+}
