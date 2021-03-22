@@ -96,18 +96,12 @@ li {
     margin-left: 1em;
 }
 
-.features-section img{
-    display: none;
-}
-
-.testimonial-section {
+.projects {
     background: var(--primary-color);
-}
-
-.person-img {
-    width: 5em;
-    height: 5em;
-}
+    position:relative;
+    display: inline-flex;
+  }
+  
 
 h2 {
     font-size: 1.5em;

@@ -104,12 +104,10 @@ li {
   margin-left: 1em;
 }
 
-.features-section img {
-  display: none;
-}
-
 .projects {
   background: var(--primary-color);
+  position:relative;
+  display: inline-flex;
 }
 
 h2 {
