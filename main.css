@@ -1,49 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700;500&family=RocknRoll+One&display=swap");
-:root {
-  --primary-color: rgb(62, 170, 241);
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 body {
-  background: #ccf0e2;
+  background: #a4f7d7;
   margin: 0;
   font-family: 'RocknRoll One', sans-serif;
 }
 
 .navbar {
   background: white;
-  padding: 1em 1em 0em 1em;
+  padding: 1em;
 }
 
-.logo {
+.navbar .logo {
   text-decoration: none;
   font-weight: bold;
   color: black;
-  font-size: 200%;
-  margin: .25em;
+  font-size: 1.2em;
 }
 
-span {
-  color: var(--primary-color);
+.navbar .logo span {
+  color: rgb(39, 39, 252);
 }
 
-nav {
-  display: none;
+.navbar nav {
+  /* display: none; */
 }
 
-.container {
+.navbar .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   place-content: space-between;
 }
 
-.mobile-menu {
+.navbar .mobile-menu {
   cursor: pointer;
 }
 
 a {
-  color: black;
-  text-decoration: none;
+  color: #444444;
 }
 
 ul {
@@ -52,94 +47,122 @@ ul {
   padding: 0;
 }
 
-#about {
-  color: rgb(1, 153, 199);
-  text-transform: uppercase;
-  font-weight:bold;
-}
-
 section {
-  padding: 3em 2em 2em 2em;
+  padding: 5em 2em;
 }
 
 .hero {
   text-align: center;
 }
 
-.subhead {
+.left-col .subhead {
   text-transform: uppercase;
   font-weight: bold;
-  color: grey;
-  letter-spacing: 1em;
+  color: gray;
+  letter-spacing: .3em;
 }
 
-h1 {
+.left-col h1 {
   font-size: 2.5em;
   line-height: 1.3em;
   margin-top: .2em;
 }
 
 .hero-img {
-  width: 50%;
-  margin-top: 1em;
+  width: 70%;
+  margin-top: 3em;
 }
 
 section.features-section {
-  background: #3d464e;
+  background: #2d3338;
   color: white;
+  text-align: center;
 }
 
 ul.features-list {
   margin: 0;
-  padding-left: .2em;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  padding-left: .1em;
+  display: inline-block;
+  flex-wrap: wrap;
 }
 
-li {
-  font-size: 1.3em;
+ul.features-list li {
+  font-size: 1.1em;
   margin-bottom: 1em;
-  margin-left: 1em;
+  margin-left: 2em;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#aboutMe {
+  font-size: 2em;
+  color: rgb(9, 239, 255)
+}
+
+#assignments{
+  font-size: 3em;
+  text-align:center;
 }
 
 .projects {
-  background: var(--primary-color);
+  background: rgb(56, 255, 133);
+  color: black;
+  flex-wrap: wrap;
+  flex-direction:row;
+}
+
+.projects .container{
+  display: flex;
+  flex-direction: column;
+}
+.projects li {
+  background: none;
+  text-align: center;
+  padding: 1em 1em;
+  width: 80%;
+  margin: 0 auto 1em auto;
+  border-radius: 1em;
+  display:flex;
+  flex-direction:column;
+}
+
+#projectImg {
   position:relative;
-  display: inline-flex;
+  display:flex;
+  align-content: center;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 label {
   display: block;
-  font-size: .8em;
-  margin-bottom: .35em;
+  font-size: 1.2em;
+  margin-bottom: .5em;
 }
 
 input, textarea {
   width: 100%;
-  padding: .75em;
+  padding: .8em;
   margin-bottom: 1em;
   border-radius: .3em;
-  border: 1px solid black;
+  border: 1px solid gray;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.send-message-cta {
-  background-color: grey;
+input[type="submit"] {
+  background-color:rgb(0, 0, 0);
   color: white;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1em;
   border: none;
   margin-bottom: 5em;
-  border-radius: .5em;
+  border-radius: 1em;
   display: inline-block;
-  padding: .75em 1em;
+  padding: 1em 2em;
   width: unset;
   cursor: pointer;
 }
@@ -154,31 +177,35 @@ nav {
   width: 40%;
   right: 0;
   top: 0;
-  bottom: 0;
-  background: #383a37;
+  background: #20272E;
   height: 100vh;
   padding: 1em;
 }
 
-ul.primary-nav {
+nav ul.primary-nav {
   margin-top: 5em;
 }
 
-.nav-text {
+nav li a {
   color: white;
+  text-decoration: none;
+  display: block;
+  padding: .5em;
+  font-size: 1.3em;
+  text-align: right;
 }
 
-.home {
-  color: white;
+nav li a:hover {
+  font-weight: bold;
 }
 
 .mobile-menu-exit {
   float: right;
-  padding: 1em;
+  margin: .5em;
   cursor: pointer;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 720px) {
   .mobile-menu, .mobile-menu-exit {
     display: none;
   }
@@ -187,6 +214,9 @@ ul.primary-nav {
     display: grid;
     -ms-grid-columns: 180px auto;
         grid-template-columns: 180px auto;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
   }
   .navbar nav {
     display: -webkit-box;
@@ -199,11 +229,7 @@ ul.primary-nav {
     position: unset;
     height: auto;
     width: 100%;
-    padding: 1em;
-    margin-bottom: -3em;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
+    padding: 0;
   }
   .navbar nav ul {
     display: -webkit-box;
@@ -219,7 +245,7 @@ ul.primary-nav {
     margin: 0;
   }
   .navbar nav li.current a {
-    font-weight: 0;
+    font-weight: bold;
   }
 }
 
@@ -240,45 +266,54 @@ ul.primary-nav {
             justify-content: space-between;
     text-align: left;
   }
-  .hero .container left-col {
+  .hero .container .left-col {
     margin: 3em 3em 0 5em;
   }
-  .hero .container h1 {
+  .hero .container .left-col h1 {
     font-size: 3em;
     width: 90%;
   }
   .hero-img {
     width: 30%;
-    margin-right: 5em;
-  }
-  .hero-cta {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .primary-cta {
-    margin-right: 1em;
+    margin-right: 8em;
   }
   ul.features-list {
     display: block;
     margin-left: 5em;
   }
   ul.features-list li {
-    font-size: 1.5em;
+    font-size: 1.4em;
+  }
+  ul.features-list li:before {
+    width: 30px;
+    height: 30px;
   }
   .features-section {
     position: relative;
+
   }
-  .features-section img {
-    display: block;
-    position: absolute;
-    right: 0;
-    width: 350px;
-    bottom: -2em;
-  }
-  .testimonial-section {
+  .projects ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .projects ul li {
+    margin: 0 1em;
+    align-content:center;
+  }
+  .contact-section {
+    position: relative;
+  }
+  .contact-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    height: 100%;
   }
 }
