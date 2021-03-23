@@ -8,7 +8,7 @@ body {
 
 .navbar {
   background: white;
-  padding: 1em;
+  padding: 1.5em;
 }
 
 .navbar .logo {
@@ -23,12 +23,10 @@ body {
 }
 
 .navbar nav {
-  /* display: none; */
+  display: none;
 }
 
 .navbar .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   place-content: space-between;
 }
@@ -71,6 +69,7 @@ section {
 .hero-img {
   width: 70%;
   margin-top: 3em;
+  border: 3px solid black;
 }
 
 section.features-section {
@@ -205,6 +204,13 @@ nav li a:hover {
   cursor: pointer;
 }
 
+.contact-section {
+  margin:0;
+  padding:50px;;
+  width: 40%;
+  height: 50px;
+} 
+
 @media only screen and (min-width: 720px) {
   .mobile-menu, .mobile-menu-exit {
     display: none;
@@ -258,8 +264,6 @@ nav li a:hover {
     padding: 10em 4em;
   }
   .hero .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -290,11 +294,8 @@ nav li a:hover {
   }
   .features-section {
     position: relative;
-
   }
   .projects ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .projects ul li {
@@ -305,8 +306,6 @@ nav li a:hover {
     position: relative;
   }
   .contact-section .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .contact-right {
