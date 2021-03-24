@@ -67,7 +67,6 @@ section {
 }
 
 .hero-img {
-  width: 70%;
   margin-top: 3em;
   border: 3px solid black;
 }
@@ -115,21 +114,25 @@ ul.features-list li {
   display: flex;
   flex-direction: column;
 }
+
 .projects li {
   background: none;
   text-align: center;
   padding: 1em 1em;
   width: 80%;
-  margin: 0 auto 1em auto;
   border-radius: 1em;
   display:flex;
   flex-direction:column;
 }
 
-#projectImg {
-  position:relative;
-  display:flex;
-  align-content: center;
+.projects li #links {
+  color: purple;
+  font-size: 25px;
+}
+
+.projects li #projectImg {
+  position: relative;
+  align-self:center;
 }
 
 h2 {
@@ -173,7 +176,7 @@ nav.menu-btn {
 nav {
   position: fixed;
   z-index: 999;
-  width: 40%;
+  width: 30%;
   right: 0;
   top: 0;
   background: #20272E;
