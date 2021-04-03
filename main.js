@@ -9,3 +9,7 @@ const mobileBtnExit = document.getElementById('mobile-exit');
     mobileBtnExit.addEventListener('click' , () => {
             nav.classList.remove('menu-btn');
         })
+
+        document.querySelector('nav-text').scrollIntoView({ 
+            behavior: 'smooth'
+        });
